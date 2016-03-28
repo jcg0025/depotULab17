@@ -1,0 +1,10 @@
+<h1>Readit</h1>
+
+<plat-foreach plat-context='posts'>
+  <h2>{{author}}</h2>
+   <h4>{{title}}<h4>
+   <h5>{{url}}</h5>
+   <plat-button plat-tap='readMore(id)'>Read More</plat-button>
+   <br>
+   <br>
+</plat-foreach>
