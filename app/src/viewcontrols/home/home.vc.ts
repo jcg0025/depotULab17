@@ -6,16 +6,15 @@ import SinglePostViewControl from '../../viewcontrols/singlepost/singlepost.vc'
 export default class HomeViewControl extends BaseViewControl {
     templateString: string = require('./home.vc.html');
 
-    context = {
+    context: any = {
       posts: []
     }
     
     constructor(private readitRepo: ReaditRepository){
         super();
     }
-    navigatedTo() {
-        this.readitRepo.getRedditList().then((success) => {
-            console.log(success);
+    navigatedTo(): any {
+        this.readitRepo.getRedditList().then((success :any) => {
            this.context.posts = success;
         })
    }

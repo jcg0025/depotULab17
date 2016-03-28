@@ -2,13 +2,13 @@ import {async, register} from 'platypus';
 import BaseService from '../base/base.svc';
 
 export default class ReaditService extends BaseService {
-    getRedditList(): async.IAjaxThenable<Array<Object>>{
+    getRedditList(): any {
         return this.http.json({
             method: 'GET',
             url: this.host
-        }).then((success) => {
+        }).then((success :any) => {
             return success.response;
-        }, (error) => {
+        }, (error : any) => {
             throw error;
         });
     }

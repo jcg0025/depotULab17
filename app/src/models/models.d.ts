@@ -4,5 +4,6 @@ declare module models {
         id: string,
         author: string,
         url: string
+        thumbnail: any;
     }    
 }

@@ -6,8 +6,8 @@ export default class ReaditRepository extends BaseRepository {
     constructor(private readitService: ReaditService){
         super();
     }
-    getRedditList() {
-      return this.readitService.getRedditList().then((success) => {
+    getRedditList(): any {
+      return this.readitService.getRedditList().then((success : any) => {
             let postArray = success.data.children;
             let filteredArray: any =[];
             for (let i = 0; i <postArray.length; i ++) {
@@ -25,13 +25,14 @@ export default class ReaditRepository extends BaseRepository {
             console.log('here');
             // console.log(data);
             return data;
-        }, (error) => {
+        }, (error :any) => {
             console.log(error)
             throw error;
         });
     }
     getRedditPost(id: string) {
-        return this.readitService.getRedditList().then((success) => {
+        return this.readitService.getRedditList().then((success :any) => {
+            console.log(success);
             let postArray = success.data.children;
             let filteredArray: any =[];
             for (let i = 0; i <postArray.length; i ++) {
