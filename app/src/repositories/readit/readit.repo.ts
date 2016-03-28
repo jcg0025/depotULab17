@@ -15,7 +15,8 @@ export default class ReaditRepository extends BaseRepository {
                     author: postArray[i].data.author,
                     id: postArray[i].data.id,
                     title: postArray[i].data.title,
-                    url: postArray[i].data.url
+                    url: postArray[i].data.url,
+                    thumbnail: postArray[i].data.thumbnail
                 }
                 filteredArray.push(post);
             }
@@ -38,7 +39,8 @@ export default class ReaditRepository extends BaseRepository {
                     author: postArray[i].data.author,
                     id: postArray[i].data.id,
                     title: postArray[i].data.title,
-                    url: postArray[i].data.url
+                    url: postArray[i].data.url,
+                    thumbnail: postArray[i].data.thumbnail
                 }
                 filteredArray.push(post);
             }
