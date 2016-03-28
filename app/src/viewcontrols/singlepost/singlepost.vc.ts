@@ -25,6 +25,7 @@ export default class SinglePostViewControl extends BaseViewControl {
           this.context.author = success.author;
           this.context.title = success.title;
           this.context.url = success.url;
+          this.context.thumbnail = success.thumbnail;
        }, (error) => {
            console.log(error);
        });
