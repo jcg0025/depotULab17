@@ -9,6 +9,7 @@ export default class ReaditRepository extends BaseRepository {
     getRedditList(): any {
       return this.readitService.getRedditList().then((success : any) => {
             let postArray = success.data.children;
+            console.log(postArray);
             let filteredArray: any =[];
             for (let i = 0; i <postArray.length; i ++) {
                 let post = {
@@ -16,7 +17,8 @@ export default class ReaditRepository extends BaseRepository {
                     id: postArray[i].data.id,
                     title: postArray[i].data.title,
                     url: postArray[i].data.url,
-                    thumbnail: postArray[i].data.thumbnail
+                    thumbnail: postArray[i].data.thumbnail,
+                    
                 }
                 filteredArray.push(post);
             }
