@@ -3,16 +3,13 @@
 <plat-foreach  plat-context='posts'>
  <div class="style"> 
   <h2>{{author}}</h2>
-   <h4>{{title}}<h4>
-   <!--<plat-link plat-options='isUrl' src='{{ url }}'>{{url}}</plat-link>-->
-   <a href="{{url}}">{{url}}</a>
-   <br>
-   <br>
-   <plat-image  src="{{thumbnail}}"></plat-image>
-   <br>
-   <br>
-   <plat-button class='button' plat-tap='readMore(id)'>Read More</plat-button>
-   <br>
-   <br>
- </div>  
+  <plat-image id='thumbnail' src="{{thumbnail}}"></plat-image>
+   <h4 id='title'>{{title}}<h4>
+   <div class='div'>
+        <a href="{{url}}">{{url}}</a>
+   </div>
+<plat-button class='button' plat-tap='readMore(id)'>Read More</plat-button>
+<br>
+<br>
+</div>  
 </plat-foreach>

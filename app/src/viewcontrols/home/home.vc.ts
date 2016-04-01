@@ -16,6 +16,7 @@ export default class HomeViewControl extends BaseViewControl {
     navigatedTo(): any {
         this.readitRepo.getRedditList().then((success :any) => {
            this.context.posts = success;
+           console.log(success);
         })
    }
    readMore(id: string){
